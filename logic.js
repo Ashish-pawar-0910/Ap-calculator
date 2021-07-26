@@ -27,8 +27,11 @@ function tan(){
     let ans= parseInt(eval(calc.txt.value))
     console.log(ans)
     var pi = Math.PI;
+    // elem = document.getElementsByClassName("equal")
     if (ans%90==0 && ans/90!=0) {
-        document.calc.txt.value= Infinity
+        // elem = document.getElementsByClassName("equal")
+        // elem.innerHTML="&#8734;"
+        document.calc.txt.value="∞"
     }
     else
         document.calc.txt.value=Math.tan(ans*(pi/180))
@@ -54,19 +57,3 @@ function BACKSPC(){
     document.calc.txt.value=a.substring(0,a.length-1)
 }
 
-var pattern = Trianglify({
-    width: 600,
-    height: 400,
-    cell_size: 75,
-    variance: 0.75,
-    seed: null, 
-    x_colors: 'random',
-    y_colors: 'match_x',
-    palette: colorbrewer, 
-    color_space: 'lab',
-    color_function: null,
-    stroke_width: 1.51,
-    points: undefined 
-})
-
-document.body.appendChild(pattern.svg())
