@@ -27,10 +27,8 @@ function tan(){
     let ans= parseInt(eval(calc.txt.value))
     console.log(ans)
     var pi = Math.PI;
-    // elem = document.getElementsByClassName("equal")
     if (ans%90==0 && ans/90!=0) {
-        // elem = document.getElementsByClassName("equal")
-        // elem.innerHTML="&#8734;"
+    
         document.calc.txt.value="∞"
     }
     else
