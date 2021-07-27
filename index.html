@@ -16,18 +16,19 @@
 <body>
     <div class="container" >
         <form class="calculator" name="calc">
-            <input type="text" readonly class="value" name="txt">
+            <input type="text" readonly class="value" id="txt" name="txt">
+            <input type="text" id="txt_2" readonly class="temp_value" name="text2">
             <span class="num sin" value="sin" onclick="sin()">sin</span>
             <span class="num cos" value="cos" onclick="cos()">cos</span>
             <span class="num tan" value="tan" onclick="tan()">tan</span>
-            <span class="num clear" onclick="calc.txt.value= ''">C</span>
+            <span class="num clear" onclick="clearall()">C</span>
             
             <span class="num square" value="x^2" onclick="getsquare()"><p>x<sup>2</sup></p> </span>
             <span class="num " value="x^3" onclick="cube()"> <p>x<sup>3</sup></p></span>
             <span class="num " value="sqrt2" onclick="sqrt2()"> &radic; </span>
             <span class="num " value="sqrt3" onclick="sqrt3()"> &#8731; </span>
             
-            <span class="num" value="percent" onclick="getpercent()"> % </span>
+            <!-- <span class="num" value="percent" onclick="getpercent()"> % </span>
             <span class="num" onclick="document.calc.txt.value += '/' ">/</span>
             <span class="num" onclick="document.calc.txt.value += '-' ">-</span>
             <span class="num" value="BACKSPC" onclick="BACKSPC()"> < </span>
@@ -45,14 +46,37 @@
             
             <span class="num" onclick="document.calc.txt.value += '1' ">1</span>
             <span class="num" onclick="document.calc.txt.value += '2' ">2</span>
-            <span class="num" onclick="document.calc.txt.value += '3' ">3</span>
+            <span class="num" onclick="document.calc.txt.value += '3' ">3</span> 
+            <span class="num equal" onclick="forequal()">=</span>
+            <span class="num" onclick="document.calc.txt.value += '0' ">0</span>
+            <span class="num" onclick="document.calc.txt.value += '00' ">00</span>
+            <span class="num" onclick="document.calc.txt.value += '.' ">.</span> -->
+
+            <span class="num" value="percent" onclick="getpercent()"> % </span>
+            <span class="num" onclick="appendNo('/')">/</span>
+            <span class="num" onclick="appendNo('-')">-</span>
+            <span class="num" value="BACKSPC" onclick="BACKSPC()"> < </span> 
+             <span class="num" onclick="appendNo('7')"  >7</span>
+            <span class="num" onclick="appendNo('8')"  >8</span>
+            <span class="num" onclick="appendNo('9')"  >9</span>
+            <span class="num" onclick="appendNo('*')"  >*</span>
+           
+            <span class="num" onclick="appendNo('4')" >4</span>
+            <span class="num" onclick="appendNo('5')"  >5</span>
+            <span class="num" onclick="appendNo('6')"  >6</span>
+            <span class="num plus" onclick="appendNo('+')"  id="+">+</span>
+           
+            
+            <span class="num" onclick="appendNo('1')"  >1</span>
+            <span class="num" onclick="appendNo('2')"  >2</span>
+            <span class="num" onclick="appendNo('3')"  >3</span>
             <span class="num equal" onclick="forequal()">=</span>
             
             
             
-            <span class="num" onclick="document.calc.txt.value += '0' ">0</span>
-            <span class="num" onclick="document.calc.txt.value += '00' ">00</span>
-            <span class="num" onclick="document.calc.txt.value += '.' ">.</span>
+            <span class="num" onclick="appendNo('0')" value="0" id="0" >0</span>
+            <span class="num" onclick="appendNo('00')" value="00" id="00">00</span>
+            <span class="num" onclick="appendNo('.')" value="." id=".">.</span>
             
             
         </form>
