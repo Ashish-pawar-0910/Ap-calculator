@@ -34,8 +34,8 @@ body {
 .container .calculator .value {
     grid-column: span 4;
     overflow-x: auto;
-    height: 100px;
-    width: 300px;
+    height: 9vh;
+    width: 56vh;
     text-align: right;
     border: none;
     outline: none;
@@ -50,8 +50,8 @@ body {
 .container .calculator .temp_value {
     grid-column: span 4;
     overflow-x: auto;
-    height: 50px;
-    width: 300px;
+    height: 8vh;
+    width: 56vh;
     text-align: right;
     border: none;
     outline: none;
@@ -76,8 +76,8 @@ body {
 .container .calculator span {
     display: grid;
     place-items: center;
-    width: 75px;
-    height: 75px;
+    width: 14vh;
+    height: 9vh;
     color: black;
     font-weight: 400;
     cursor: pointer;
@@ -108,7 +108,7 @@ body {
 .container .calculator .equal {
     background: rgba(255, 255, 255, 0.05);
     grid-row: span 2;
-    height: 150px;
+    height: 17vh;
 }
 
 
@@ -216,44 +216,23 @@ body {
     }
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:426px) {
+
     .container .calculator .value {
-        height: 40px;
+        height: 8vh;
+        width: 44vh;
         font-size: 25px;
     }
 
     .container .calculator .temp_value {
-        height: 27px;
+        height: 7vh;
+        width: 44vh;
         font-size: 16px;
-    }
-}
-
-@media screen and (min-width:450px) and (max-width:770px) {
-    .container .calculator .value {
-        height: 50px;
-        font-size: 26px;
-    }
-
-    .container .calculator .temp_value {
-        height: 32px;
-        font-size: 18px;
-    }
-}
-
-
-@media screen and (min-width:770px) {
-    .container .calculator .value {
-        /* height: 80px; */
-        width: 400px;
-    }
-
-    .container .calculator .temp_value {
-        /* height: 80px; */
-        width: 400px;
     }
 
     .container .calculator span {
-        width: 100px;
+        width: 11vh;
+        height: 8.5vh;
+        font-size: 16px;
     }
-
 }
